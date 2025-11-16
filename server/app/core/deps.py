@@ -2,9 +2,11 @@ from typing import Generator, Annotated
 from sqlmodel import Session 
 from fastapi import Depends
 
+from app.core.db import engine
+
 
 def get_session() -> Generator[Session, None, None]:
     with Session(engine) as session:
         yield session
 
-SessionDeps = Annotated[Session, Depends(get_session)]
+SessionDep = Annotated[Session, Depends(get_session)]
