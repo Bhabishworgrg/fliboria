@@ -4,6 +4,7 @@ from sqlalchemy import pool
 from alembic import context
 from sqlmodel import SQLModel
 
+from app.models import user, player, log, chat
 from app.core.config import settings
 
 
