@@ -1,8 +1,9 @@
 from fastapi import FastAPI
+from fastapi.responses import RedirectResponse
 
 
 app = FastAPI()
 
-@app.get('/')
+@app.get('/', response_class=RedirectResponse)
 async def root():
-    return {'message': 'Hello World'}
+    return RedirectResponse('/docs') 
