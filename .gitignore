@@ -1,0 +1,19 @@
+# Kitty config
+session.kitty
+
+# Python generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environment
+.venv/
+
+# Environment variable files
+.env*
+
+# Vim temporary swap files
+*.swp
